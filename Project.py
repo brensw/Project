@@ -25,13 +25,13 @@ print ("To create a scatter plot of petal length vs sepal length enter: 3")
 print ('To see relative importance of each varible enter: 4')
 print ("To exit enter: 5")
 
-n_in= int(input("Please enter the number  of your choice:") )
+n_in= int(input("Please enter the number of your choice:") )
 if n_in >= 6:
     print ("Please enter a valid number")
 elif n_in == 5: # exit application
     raise SystemExit()
 elif n_in == 1: #display the dataset :https://machinelearningmastery.com/machine-learning-in-python-step-by-step/
-    print(dataset.head())
+    print(dataset.head(150))
 elif n_in == 2: #show basic analysis of dataset: https://machinelearningmastery.com/machine-learning-in-python-step-by-step/
     print(dataset.describe())
 elif n_in == 3: #create colour scatter plot for each species:  https://www.kaggle.com/camontanezp/learning-python-data-analysis-with-iris
