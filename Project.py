@@ -25,7 +25,7 @@ dataset = pandas.read_csv(url, names=names)
 
 
 print ("Please enter an option")
-print ("To display datset enter: 1")
+print ("To display dataset enter: 1")
 print ("To see a summary of the data enter: 2 ")
 print ("To create a scatter plot of petal length vs sepal length enter: 3")
 print ("To exit enter: 4")
@@ -34,11 +34,11 @@ if n_in >= 5:
     print ("Please enter a valid number")
 elif n_in == 4: # exit application
     raise SystemExit()
-elif n_in == 1: #display the dataset 
+elif n_in == 1: #display the dataset :https://machinelearningmastery.com/machine-learning-in-python-step-by-step/
     print(dataset.head())
-elif n_in == 2: #show basic analysis of dataset
+elif n_in == 2: #show basic analysis of dataset: https://machinelearningmastery.com/machine-learning-in-python-step-by-step/
     print(dataset.describe())
-elif n_in == 3: #create colour scatter plot for each species as shown at https://www.kaggle.com/camontanezp/learning-python-data-analysis-with-iris
+elif n_in == 3: #create colour scatter plot for each species:  https://www.kaggle.com/camontanezp/learning-python-data-analysis-with-iris
     ax = dataset[dataset.species == "Iris-setosa"].plot(kind="scatter", x="sepal-length", y="petal-length", 
     color="red", label="Iris-setosa",title="Sepal Lenght vs. Petal Length")
     dataset[dataset.species == "Iris-virginica"].plot(kind="scatter", x="sepal-length", y="petal-length", 
