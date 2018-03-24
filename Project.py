@@ -5,16 +5,10 @@
 import pandas
 from pandas.plotting import scatter_matrix
 import matplotlib.pyplot as plt
-from sklearn import model_selection
-from sklearn.metrics import classification_report
-from sklearn.metrics import confusion_matrix
-from sklearn.metrics import accuracy_score
-from sklearn.linear_model import LogisticRegression
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
-from sklearn.naive_bayes import GaussianNB
-from sklearn.svm import SVC
+import numpy as np
+from sklearn.ensemble import RandomForestClassifier
+
+
 
 
 # Load dataset (https://machinelearningmastery.com/machine-learning-in-python-step-by-step/)
@@ -28,11 +22,13 @@ print ("Please enter an option")
 print ("To display dataset enter: 1")
 print ("To see a summary of the data enter: 2 ")
 print ("To create a scatter plot of petal length vs sepal length enter: 3")
-print ("To exit enter: 4")
+print ('To see relative importance of each varible enter: 4')
+print ("To exit enter: 5")
+
 n_in= int(input("Please enter the number  of your choice:") )
-if n_in >= 5:
+if n_in >= 6:
     print ("Please enter a valid number")
-elif n_in == 4: # exit application
+elif n_in == 5: # exit application
     raise SystemExit()
 elif n_in == 1: #display the dataset :https://machinelearningmastery.com/machine-learning-in-python-step-by-step/
     print(dataset.head())
@@ -46,6 +42,24 @@ elif n_in == 3: #create colour scatter plot for each species:  https://www.kaggl
     dataset[dataset.species == "Iris-versicolor"].plot(kind="scatter", x="sepal-length", y="petal-length", 
     color="blue", label="Iris-versicolor", ax=ax)
     plt.show()
+elif n_in == 4:
+    X = dataset.iloc[:,0:4]
+    Y = dataset.iloc[:,-1]
+    names = dataset.columns.values
+    rfc = RandomForestClassifier()
+    rfc.fit(X, Y)
+    importance = rfc.feature_importances_
+    sorted_importances = np.argsort(importance)
+    padding = np.arange(len(names)-1) + 0.5
+    plt.barh(padding, importance[sorted_importances], align='center')
+    plt.yticks(padding, names[sorted_importances])
+    plt.xlabel("Relative Importance")
+    plt.title("Variable Importance")
+    plt.show()
+
+
+        
+
 
 raise SystemExit()
 
