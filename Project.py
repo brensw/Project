@@ -1,7 +1,7 @@
 #Brendan Sweeney, 24/03/2018
 #Iris dataset analysis
 
-#Load libraries (https://machinelearningmastery.com/machine-learning-in-python-step-by-step/)
+#Load libraries 
 import pandas
 from pandas.plotting import scatter_matrix
 import matplotlib.pyplot as plt
