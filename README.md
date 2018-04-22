@@ -1,10 +1,10 @@
 # Programming and Scripting Prjoect 
 
-#Dataset Used
+# Dataset Used
 The dataset used in this project is Fischer’s Iris data set. The data is taken from a 1936 paper by Ronald Fischer. The fifty instances of sepal length and width along with the petal length and width of three species of the Iris flower, Iris setosa, Iris virginica and Iris versicolor, were recorded as part of the paper (UCI, n.d). 
 
 
-#References
+# References
 Jason Borwnlee 2016, Machine Learning Mastery, acessed on 22 April 2018,
 <https://machinelearningmastery.com/machine-learning-in-python-step-by-step>.
 
