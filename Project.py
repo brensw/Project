@@ -30,7 +30,7 @@ while ex == 0: #create loop to display option menu after chosen step is complete
 
     n_in= int(input("Please enter the number of your choice:") )
     if n_in >= 7:
-        print ("Please enter a valid number")
+        print ("Please enter a number between 1 and 6")
 
     elif n_in == 6: # exit application
         raise SystemExit()
