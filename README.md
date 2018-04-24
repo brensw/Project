@@ -8,11 +8,11 @@ The dataset used in this project is Fischer’s Iris data set. The data is taken
 ## The Code and Analysis
 
 The analysis of the dataset is carried out with the use of various Python libaries, the libaries required are imported in the first portion of code. The libaries used are: 
-    *Pandas
-    *Numpy
-    *Seaborn
-    *Matplotlib
-    *Sklearn 
+    -Pandas
+    -Numpy
+    -Seaborn
+    -Matplotlib
+    -Sklearn 
 
 Once these libraries are imported, the dataset itself is loaded directly from the UCI archive URL, loading the dataset directly from the URL allows the code to be run on any machine with an internet connection, however, if any modification to the dataset was expected then loading from a locally stored copy fo the dataset would be preferable to ensure that any changes made previouly would be accessable. 
 
