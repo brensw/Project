@@ -55,15 +55,15 @@ while ex == 0: #create loop to display option menu after chosen step is complete
         plt.show()
         
     elif n_in == 5: #https://www.datacamp.com/community/tutorials/exploratory-data-analysis-python
-        X = dataset.iloc[:,0:4]
-        Y = dataset.iloc[:,-1]
+        X = dataset.iloc[:,0:4] # x varible values
+        Y = dataset.iloc[:,-1] # y is species names
         names = dataset.columns.values
-        rfc = RandomForestClassifier()
+        rfc = RandomForestClassifier() 
         rfc.fit(X, Y)
         importance = rfc.feature_importances_
-        sorted_importances = np.argsort(importance)
-        padding = np.arange(len(names)-1) + 0.5
-        plt.barh(padding,importance[sorted_importances], color='g', align='center')
+        sorted_importances = np.argsort(importance) #sort order big to small 
+        padding = np.arange(len(names)-1) + 0.5  # line 65 to 70 format and show plot
+        plt.barh(padding,importance[sorted_importances], color='g', align='center') 
         plt.yticks(padding, names[sorted_importances])
         plt.xlabel("Relative Importance")
         plt.title("Variable Importance")

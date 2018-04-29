@@ -69,6 +69,17 @@ Looking at the matrix it is possible that the petal width and length are the var
 
 ### Option 5
 
+Selection option five allows the user to look at which varibles are of the most importance in determining what species a iris plant may belong to. The code draws on three seperate libraries, sklearn, numpy and matlibplot. Firstly x and y are set to vaible values and species names repectfully. Then the random forrest clissifer function imported from the sklearn library is utilsed. A random forrest classifier creates many random decision trees based on data, it then combines  all these outcomes to generate a model that is cabable of predicting future outcomes based on new data. 
+
+The resluts of the random forrest classifer algorithim are then sorted using numpy function '.argsort' and plotted using matplotlib.
+
+We can see from the image below that the most important varible in determining what specices a given Iris may belong to is its petal length followed by its petal width.  
+
+![Option 5](https://github.com/brensw/Project/blob/master/Images/Option_5.png?raw=true "Option 5")
+
+
+
+
 
 
 ## References
