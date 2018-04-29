@@ -54,7 +54,7 @@ while ex == 0: #create loop to display option menu after chosen step is complete
         sns.pairplot(df, hue='species',palette="husl",markers=["o", "s", "D"]) #create scatter matrix (https://seaborn.pydata.org/generated/seaborn.pairplot.html)
         plt.show()
         
-    elif n_in == 5:
+    elif n_in == 5: #https://www.datacamp.com/community/tutorials/exploratory-data-analysis-python
         X = dataset.iloc[:,0:4]
         Y = dataset.iloc[:,-1]
         names = dataset.columns.values
