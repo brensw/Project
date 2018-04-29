@@ -31,7 +31,7 @@ With the dataset loaded and formatted, the program creates a onscreen menu for t
 The menu is intedned to reappear after a selected option other then Exit, has been carried out to allow the user to perform as many operations as desisred until they exit the program. The menu itself is created using an 'if' loop, the user enters values from 1 to 6 causing the appropriate code to run, values higher then 6 causes an new message to enter a number between 1 and 6  to be displayed to the user. 
 
 If option one is selected then the Pandas dataframe created earlier is displayed to the user. 
-![Option 1 displayed](C:\Users\Brendan\Desktop\Option_1.png?raw=true "Option 1")
+![Option 1 displayed]('Images\Option_1.png?raw=true "Option 1")
 
 If option two is selected 
 
