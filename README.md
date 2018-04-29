@@ -54,7 +54,7 @@ If the user selects option three then a scatter plot of petal lenght versus sepa
 
 This scatter plot shows the realtive size difference of each species in realtion to each other, along with the realtionship between sepal and petal lenghts for each species. One can see on the image below that Iris Setosa is significanly smaller then the other two species. Iris Virginica and Iris Versicolor have somew overlap, although Virginica is generally seen to be larger then Iris Versicolor. 
 
-![Option 3](https://github.com/brensw/Project/blob/master/Images/Option_2.png?raw=true "Option 3")
+![Option 3](https://github.com/brensw/Project/blob/master/Images/Option_3.png?raw=true "Option 3")
 
 ## References
 Jason Borwnlee 2016, Machine Learning Mastery, accessed on 22 April 2018,
