@@ -15,7 +15,7 @@ import seaborn as sns
 # Load dataset (https://machinelearningmastery.com/machine-learning-in-python-step-by-step/)
 url = "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
 names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'species']
-dataset = pandas.read_csv(url, names=names) #downlaod iris csv file and add colunm names 
+dataset = pandas.read_csv(url, names=names) #downlaod iris csv file and add colunm names as dataset
 df = pandas.DataFrame(dataset) # create pandas data frame with iris dataset
 
 ex= 0
@@ -39,7 +39,7 @@ while ex == 0: #create loop to display option menu after chosen step is complete
         print(df)
         
     elif n_in == 2: #show basic analysis of dataset (https://machinelearningmastery.com/machine-learning-in-python-step-by-step/)
-        print(dataset.describe())
+        print(df.describe())
 
     elif n_in == 3: #create colour scatter plot sepal v petal length (https://www.kaggle.com/camontanezp/learning-python-data-analysis-with-iris)
         ax = dataset[dataset.species == "Iris-setosa"].plot(kind="scatter", x="sepal-length", y="petal-length", 
