@@ -56,6 +56,21 @@ This scatter plot shows the realtive size difference of each species in realtion
 
 ![Option 3](https://github.com/brensw/Project/blob/master/Images/Option_3.png?raw=true "Option 3")
 
+### Option 4
+
+The idea of a scatter plot of the data as seen in option three is further developed in option four. rather then a simple scatter plot with only two varibles plotted, option four generates a scatter matrix with each varible plotted against every other one. This scatter matrix is created using the Seaborn library and displayed using the Matplotlib library. The Seaborn library allows this scatter matrix to be created using minimal code, it for this simplity that it was used over methods/libraries such as using a matlibplot array as [used here](https://www.kaggle.com/camontanezp/learning-python-data-analysis-with-iris) though which similar reslut may be obtained. 
+
+What is very noticble from this matrix, is that Iris Setosa is consistanly smaller then both Iris Virginica and Versicolor across all varibles. Virginica can be seen to generally be larger the Versicolor acrossthe varibles although some overlap is present to variing degrees. 
+
+Looking at the matrix it is possible that the petal width and length are the varibles that show the most distinction between the specices. Option five explores this. 
+
+![Option 4](https://github.com/brensw/Project/blob/master/Images/Option_4.png?raw=true "Option 4")
+
+
+### Option 5
+
+
+
 ## References
 Jason Borwnlee 2016, Machine Learning Mastery, accessed on 22 April 2018,
 <https://machinelearningmastery.com/machine-learning-in-python-step-by-step>.

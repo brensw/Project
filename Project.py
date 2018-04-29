@@ -43,7 +43,7 @@ while ex == 0: #create loop to display option menu after chosen step is complete
 
     elif n_in == 3: #create colour scatter plot sepal v petal length (https://www.kaggle.com/camontanezp/learning-python-data-analysis-with-iris)
         ax = dataset[dataset.species == "Iris-setosa"].plot(kind="scatter", x="sepal-length", y="petal-length", 
-        color="red", label="Iris-setosa",title="Sepal Lenght vs. Petal Length")
+        color="red", label="Iris-setosa",title="Sepal Length vs. Petal Length")
         dataset[dataset.species == "Iris-virginica"].plot(kind="scatter", x="sepal-length", y="petal-length", 
         color="green", label="Iris-virginica", ax=ax)
         dataset[dataset.species == "Iris-versicolor"].plot(kind="scatter", x="sepal-length", y="petal-length", 
