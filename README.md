@@ -1,106 +1,122 @@
-# Programming and Scripting Project 
-
+# Programming and Scripting Project 2018
+#### Brendan Sweeney
 
 ## Dataset Used
-The dataset used in this project is Fischer’s Iris data set. The data is taken from a 1936 paper by Ronald Fischer. The dataset conatains fifty instances of sepal length and width along with the petal length and width of three species of the Iris flowers, these being the Iris setosa, Iris virginica and Iris versicolor(UCI, n.d). 
+The dataset used in this project is Fischer’s Iris data set. The data is taken from a 1936 paper by Ronald Fischer. The dataset contains fifty instances of sepal length and width along with the petal length and width of three species of the Iris flowers, these being the Iris setosa, Iris virginica and Iris versicolor (UCI, n.d). 
 
-The relatively small size and completeness of the the dataset means that it is ideal as test dataset when developing programs/methods for machine learning and data analysis. As a result Fischer's Iris data set has become very well known and is commonly used to check if a new method is behaving as expected etc.
+The relatively small size and completeness of the dataset means that it is ideal as test dataset when developing programs/methods for machine learning and data analysis. As a result, Fischer's Iris data set has become very well-known and is commonly used to check if a new method is behaving as expected etc.
 
 ## The Code and Analysis
 
-The analysis of the dataset is carried out with the use of various Python libaries, the libaries required are imported in the first portion of code. The libaries used are:
+The analysis of the dataset is carried out with the use of various Python libraries, the libraries required are imported in the first portion of code. The libraries used are:
 * Pandas
 * Numpy
 * Seaborn
 * Matplotlib
 * Sklearn 
 
-Once these libraries are imported, the dataset is loaded directly from the UCI archive URL, loading the dataset directly from the URL allows the code to be run on any machine with an internet connection, however, if any modification to the dataset was expected then loading from a locally stored copy of the dataset would be preferable to ensure that any changes made previouly would be accessable. 
+Once these libraries are imported, the dataset is loaded directly from the UCI archive URL, loading the dataset directly from the URL allows the code to be run on any machine with an internet connection, however, if any modification to the dataset was expected then loading from a locally stored copy of the dataset would be preferable to ensure that any changes made previously would be accessible. 
 
-The version of Fischer's dataset used is in the CSV format, the Pandas library CSV tools are used to handle this file. The columns are given appropriate names and a dataframe created, again utilizing Pandas, to allow for easier analysis later. 
+The version of Fischer's dataset used is in the CSV format, the Pandas library CSV tools are used to handle this file. The columns are given appropriate names and a data frame created, again utilizing Pandas, to allow for easier analysis later. 
 
-With the dataset loaded and formatted, the program creates a onscreen menu for the user giving  the user six options:
+With the dataset loaded and formatted, the program creates an onscreen menu for the user giving the user six options:
 
 1. Display the data 
 2. Display a summary of the data 
 3. Create and show a scatter matrix of sepal vs petal length
-4. Create and show a scatter matrix of of all varibles 
-5. Display a graph displaying the realtive importance of each varible in determing the species of Iris
+4. Create and show a scatter matrix of all variables 
+5. Display a graph displaying the relative importance of each variable in determine the species of Iris
 6. Exit the program.
 
-The menu is intedned to reappear after a selected option other then Exit, has been carried out to allow the user to perform as many operations as desisred until they exit the program. The menu itself is created using an 'if' loop, the user enters values from 1 to 6 causing the appropriate code to run, values higher then 6 causes an new message to enter a number between 1 and 6  to be displayed to the user. 
+The menu is intended to reappear after a selected option other than Exit, has been carried out to allow the user to perform as many operations as desired until they exit the program. The menu itself is created using an 'if' loop, the user enters values from 1 to 6 causing the appropriate code to run, values higher than 6 causes a new message to enter a number between 1 and 6 to be displayed to the user. 
 
 ### Option 1
-If option one is selected then the Pandas dataframe created earlier is displayed to the user. The code 'print(df)' was used to display the data as it allowed for the titled data to shown using very simple code. 
+If option one is selected, then the Pandas data frame created earlier is displayed to the user. The code 'print(df)' was used to display the data as it allowed for the titled data to shown using very simple code. 
 ![Option 1](https://github.com/brensw/Project/blob/master/Images/Option_1.png?raw=true "Option 1")
 
 ### Option 2
-If option two is selected, then Pandas DataFrame.describe funtion is called. This function generates a basic analysis of the dataset. The information generated by default include:
+If option two is selected, then Pandas DataFrame.describe function is called. This function generates a basic analysis of the dataset. The information generated by default include:
 
-* Count for number of instaces in each colunm
-* Mean for each colunm
-* The Standard Deviation for each colunm
-* The Minimum value found in each colunm
-* The 25th, 50th and 75th percintiles   
+* Count for number of instances in each column
+* Mean for each column
+* The Standard Deviation for each column
+* The Minimum value found in each column
+* The 25th, 50th and 75th percentiles   
 * The Maximum value for each column 
 
-This method was chosen as it generates alot of useful information very easily.While the information generated here is very useful, it is not broken down by specices as a result it is limited. The graphic representation of data is often preferred over data in a table type format as it can be easier to assess the realtionship between varibles when dispalyed graphiclly. With that in mind we move on to the next option
+This method was chosen as it generates a lot of useful information very easily. While the information generated here is very useful, it is not broken down by species as a result it is limited. The graphic representation of data is often preferred over data in a table type format as it can be easier to assess the relationship between variables when displayed graphically. With that in mind we move on to the next option
 
 ![Option 2](https://github.com/brensw/Project/blob/master/Images/Option_2.png?raw=true "Option 2")
 
 ### Option 3 
 
-If the user selects option three then a scatter plot of petal lenght versus sepal length is created and displayed for each species. The plot is created using the Pandas library with the describe.species being used to break the data into three seperate species, each being assigned a colour. The resulting images is displayed using the Matplotlib library. 
+If the user selects option three then a scatter plot of petal length versus sepal length is created and displayed for each species. The plot is created using the Pandas library with the describe.species being used to break the data into three separate species, each being assigned a colour. The resulting images is displayed using the Matplotlib library. 
 
-This scatter plot shows the realtive size difference of each species in realtion to each other, along with the realtionship between sepal and petal lenghts for each species. One can see on the image below that Iris Setosa is significanly smaller then the other two species. Iris Virginica and Iris Versicolor have somew overlap, although Virginica is generally seen to be larger then Iris Versicolor. 
+This scatter plot shows the relative size difference of each species in relation to each other, along with the relationship between sepal and petal lengths for each species. One can see on the image below that Iris Setosa is significantly smaller than the other two species. Iris Virginica and Iris Versicolor have some overlap, although Virginica is generally seen to be larger than Iris Versicolor. 
 
 ![Option 3](https://github.com/brensw/Project/blob/master/Images/Option_3.png?raw=true "Option 3")
 
 ### Option 4
 
-The idea of a scatter plot of the data as seen in option three is further developed in option four. rather then a simple scatter plot with only two varibles plotted, option four generates a scatter matrix with each varible plotted against every other one. This scatter matrix is created using the Seaborn library and displayed using the Matplotlib library. The Seaborn library allows this scatter matrix to be created using minimal code, it for this simplity that it was used over methods/libraries such as using a matlibplot array as [used here](https://www.kaggle.com/camontanezp/learning-python-data-analysis-with-iris) though which similar reslut may be obtained. 
+The idea of a scatter plot of the data as seen in option three is further developed in option four. rather than a simple scatter plot with only two variables plotted, option four generates a scatter matrix with each variable plotted against every other one. This scatter matrix is created using the Seaborn library and displayed using the Matplotlib library. The Seaborn library allows this scatter matrix to be created using minimal code, it for this simplify that it was used over methods/libraries such as using a matlibplot array as [used here](https://www.kaggle.com/camontanezp/learning-python-data-analysis-with-iris) though which similar result may be obtained. 
 
-What is very noticble from this matrix, is that Iris Setosa is consistanly smaller then both Iris Virginica and Versicolor across all varibles. Virginica can be seen to generally be larger the Versicolor acrossthe varibles although some overlap is present to variing degrees. 
+What is very notable from this matrix, is that Iris Setosa is consistently smaller then both Iris Virginica and Versicolor across all variables. Virginica can be seen to generally be larger the Versicolor across the variables although some overlap is present to varying degrees. 
 
-Looking at the matrix it is possible that the petal width and length are the varibles that show the most distinction between the specices. Option five explores this. 
+Looking at the matrix it is possible that the petal width and length are the variables that show the most distinction between the species. Option five explores this. 
 
 ![Option 4](https://github.com/brensw/Project/blob/master/Images/Option_4.png?raw=true "Option 4")
 
-
 ### Option 5
 
-Selection option five allows the user to look at which varibles are of the most importance in determining what species a iris plant may belong to. The code draws on three seperate libraries, sklearn, numpy and matlibplot. Firstly x and y are set to vaible values and species names repectfully. Then the random forrest clissifer function imported from the sklearn library is utilsed. A random forrest classifier creates many random decision trees based on data, it then combines  all these outcomes to generate a model that is cabable of predicting future outcomes based on new data. 
+Selection option five allows the user to look at which variables are of the most importance in determining what species an iris plant may belong to. The code draws on three separate libraries, sklearn, numpy and matlibplot. Firstly, x and y are set to variable values and species names respectfully. Then the random forest classifier function imported from the sklearn library is utilised. A random forest classifier creates many random decision trees based on data, it then combines  all these outcomes to generate a model that is capable of predicting future outcomes based on new data. 
 
-The resluts of the random forrest classifer algorithim are then sorted using numpy function '.argsort' and plotted using matplotlib.
+The results of the random forest classifier algorithm are then sorted using numpy function '.argsort' and plotted using matplotlib.
 
-We can see from the image below that the most important varible in determining what specices a given Iris may belong to is its petal length followed by its petal width.  
+We can see from the image below that the most important variable in determining what species a given Iris may belong to is its petal length followed by its petal width.  
 
 ![Option 5](https://github.com/brensw/Project/blob/master/Images/Option_5.png?raw=true "Option 5")
 
+### Option 6 
+
+Selecting option 6 simply calls 'SystemExit' this quits the program in neat manner. 
+
+## Conclusion 
+
+The dataset used, Fischer's Iris data, is well formatted and known to be complete. Because of this no pre-processing was deemed necessary, with datasets that are larger or less well known then it may be beneficial to perform some degree of pre-processing to ensure that the data is as user friendly as possible. Analysis of the found that the Iris Setosa species to be easily identifiable as it is consistently smaller then both Iris Virginia and Versicolor. Iris Virgina is generally larger then Versicolor but a certain amount of overlap is present. 
+
+It was found that the petal length is the most important variable when attempting to classify a species, followed by petal width. 
+
+Fischer’s Iris dataset is very common dataset with which to work with and many examples of analysis that may be carried out on it are present online. This program attempts to carry out a worthwhile analysis while keeping the program and its use as clean as possible. 
+
+Itis possible to look for correlation using matplotlib and bokeh as described [here](https://www.datacamp.com/community/tutorials/exploratory-data-analysis-python) however this was not done as it was felt that given the low number of variables in the Fischer dataset correlations were obvious in the scatter plots and little would have been gained from employing these techniques on this dataset. Given the right dataset however these techniques could well be helpful. 
 
 
 
 
 
 ## References
+Fergus Boyles 2017, Oxford Protein Informatics Group, accessed on 22 April 2018, 
+<http://www.blopig.com/blog/2017/07/using-random-forests-in-python-with-scikit-learn/>.
+
 Jason Borwnlee 2016, Machine Learning Mastery, accessed on 22 April 2018,
 <https://machinelearningmastery.com/machine-learning-in-python-step-by-step>.
 
 Kaggle n.d., accessed on 22 April 2018, 
 <https://www.kaggle.com/camontanezp/learning-python-data-analysis-with-iris>.
 
+Karlijn Willems 2017, Data Camp, accessed on 29 April 2018, 
+<https://www.datacamp.com/community/tutorials/exploratory-data-analysis-python>
+
 Micheal Waskom n.d., seaborn: statistical data visualization, accessed on 22 April 2018,
 <https://seaborn.pydata.org/generated/seaborn.pairplot.html>.
 
 https://www.python.org/
 
-https://stackoverflow.com/questions/tagged/python
+< https://www.reddit.com/r/Python/>
 
-Fergus boyles 2017, Oxford Protein Informatics Group, accessed on 22 April 2018, 
-<http://www.blopig.com/blog/2017/07/using-random-forests-in-python-with-scikit-learn/>.
-
-https://ugoproto.github.io/ugo_py_doc/Exploratory%20Data%20Analysis/
+<https://stackoverflow.com/questions/tagged/python>
 
 UCI n.d., Universtiy California Irvine, Machine Learning Repository, accessed on 22 April 2018, <https://archive.ics.uci.edu/ml/datasets/iris>
 
-https://www.datacamp.com/community/tutorials/exploratory-data-analysis-python
+
+<https://ugoproto.github.io/ugo_py_doc/Exploratory%20Data%20Analysis/>
